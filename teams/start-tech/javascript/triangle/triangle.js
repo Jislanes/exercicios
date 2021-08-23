@@ -42,5 +42,21 @@ export class Triangle {
       return false;
     }
   }
-}
+  
+  get isDegenerate() { 
+    if (this.b > 0 && this.c > 0 && this.b > 0) {
+        if (this.a + this.b === this.c || this.c + this.b === this.a || this.a + this.c === this.b){
+
+         return true
+        } else {
+          return false;
+        }
+      } else{
+        return false;
+      }
+        }
+    }
+
+
+ 
 

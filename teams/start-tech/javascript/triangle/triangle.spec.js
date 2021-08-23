@@ -104,9 +104,9 @@ describe('Triangle', () => {
 });
 
 describe('degenerate triangle', () => {
-  test('no sides are equal', () => {
+  test('no sides is zero', () => {
     const triangle = new Triangle(0, 0, 0);
-    expect(triangle.isDegenerate).toBe(true);
+    expect(triangle.isDegenerate).toBe(false);
   });
 
   test('all sides are equal', () => {
