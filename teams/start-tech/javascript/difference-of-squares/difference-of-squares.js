@@ -22,7 +22,6 @@ export class Squares {
   return soma;
   }  
 
-
   get squareOfSum() {
     let n = 0;
     var quadrado = 0;
