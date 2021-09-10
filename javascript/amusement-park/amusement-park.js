@@ -1,7 +1,6 @@
 /// <reference path="./global.d.ts" />
 // @ts-check
 
-
 export function createVisitor(name, age, ticketId) {
  const visitor = {
    name: name,
@@ -11,7 +10,6 @@ export function createVisitor(name, age, ticketId) {
  return visitor;
 }
 
-
 export function revokeTicket(visitor) {
   visitor.ticketId = null;
   return visitor;
@@ -19,25 +17,20 @@ export function revokeTicket(visitor) {
 
 export function ticketStatus(tickets, ticketId) {
     if (tickets[ticketId] === null){
-    return 'not sold'
+    return 'not sold';
   } else if(tickets[ticketId] === undefined){
-    return 'unknown ticket id'
+    return 'unknown ticket id';
   }
   else {
-    return `sold to ${tickets[ticketId]}`
+    return `sold to ${tickets[ticketId]}`;
   }
 }
 
 export function simpleTicketStatus(tickets, ticketId) {
-  if (ticketStatus(tickets, ticketId) === 'not sold' ||ticketStatus(tickets, ticketId) === 'unknown ticket id'){
-    return 'invalid ticket !!!'
-  } else {
-    return tickets[ticketId]
-  }
+  return tickets[ticketId] ?? 'invalid ticket !!!';
 }
-
+ 
 export function gtcVersion(visitor) {
-  if (visitor.gtc != null && visitor.gtc != undefined){
-   return visitor.gtc.version 
-  }
+   return visitor.gtc?.version;
+  
 }
